@@ -16,7 +16,7 @@ class MoneyTest {
         float resultado=Money.change(origen,destino,money);
         //ASSERT
         //assertEquals(28.37f,resultado);
-        assertEquals(28.37f,resultado);
+        assertEquals(28.37f,2,resultado);
     }
 
 
@@ -29,7 +29,7 @@ class MoneyTest {
         //ACT
         float resultado=Money.change(origen, destino,money);
         //ASSERT
-        assertEquals(1165.83f,resultado);
+        assertEquals(1165.83f,2,resultado);
     }
 
 
@@ -42,7 +42,7 @@ class MoneyTest {
         //ACT
         float resultado=Money.change(origen, destino,money);
         //ASSERT
-        assertEquals(201.21f,resultado);
+        assertEquals(201.21f,2,resultado);
     }
 
     @Test
@@ -54,7 +54,7 @@ class MoneyTest {
         //ACT
         float resultado=Money.change(origen, destino,money);
         //ASSERT
-        assertEquals(37.51f,resultado);
+        assertEquals(37.51f,2,resultado);
     }
 
     @Test
@@ -66,7 +66,7 @@ class MoneyTest {
         //ACT
         float resultado=Money.change(origen, destino,money);
         //ASSERT
-        assertEquals(138.49f,resultado);
+        assertEquals(138.49f,2,resultado);
     }
 
     @Test
@@ -78,7 +78,7 @@ class MoneyTest {
         //ACT
         float resultado=Money.change(origen, destino,money);
         //ASSERT
-        assertEquals(722.14f,resultado);
+        assertEquals(722.14f,2,resultado);
     }
 
 

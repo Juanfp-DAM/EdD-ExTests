@@ -8,7 +8,7 @@ public class Money {
     private static final float gbpEur=1.165826f;
 
     public static float change(TipoMoneda origen, TipoMoneda destino, float money){
-        float monedaConvertida=0f;
+        float monedaConvertida;
         float monedaIntercambio;
         if(money>=0) {
             if (origen.equals(TipoMoneda.EUR)) {
@@ -22,7 +22,7 @@ public class Money {
             } else if (origen.equals(TipoMoneda.GBP)) {
                 if (destino.equals(TipoMoneda.EUR)) {
                     monedaConvertida =  (money * gbpEur);
-                    //TODO hacer cambio GBP DOLAR
+
                 }else if(destino.equals(TipoMoneda.USD)){
                 monedaIntercambio=(money*gbpEur);
                 monedaConvertida=(monedaIntercambio*eurUsd);
@@ -44,7 +44,6 @@ public class Money {
         }else{
             monedaConvertida=-1;
         }
-
         return monedaConvertida;
     }
 }
