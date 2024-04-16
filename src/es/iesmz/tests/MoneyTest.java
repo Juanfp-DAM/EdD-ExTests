@@ -57,4 +57,17 @@ class MoneyTest {
         assertEquals(37.51f,resultado);
     }
 
+    @Test
+    void tipoCambio5(){
+        //ARRANGE
+        TipoMoneda origen=TipoMoneda.GBP;
+        TipoMoneda destino=TipoMoneda.USD;
+        float money=100.0f;
+        //ACT
+        float resultado=Money.change(origen, destino,money);
+        //ASSERT
+        assertEquals(138.49f,resultado);
+    }
+
+
 }
