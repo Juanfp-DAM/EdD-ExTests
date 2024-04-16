@@ -15,7 +15,6 @@ class MoneyTest {
         //ACT
         float resultado=Money.change(origen,destino,money);
         //ASSERT
-        //assertEquals(28.37f,resultado);
         assertEquals(28.37f,2,resultado);
     }
 
