@@ -13,27 +13,31 @@ public class Money {
         if(money>=0) {
             if (origen.equals(TipoMoneda.EUR)) {
                 if (destino.equals(TipoMoneda.USD)) {
-                    monedaConvertida = (float) (money * eurUsd);
+                    monedaConvertida = (money * eurUsd);
                 } else if (destino.equals(TipoMoneda.GBP)) {
-                    monedaConvertida = (float) (money * eurGbp);
+                    monedaConvertida = (money * eurGbp);
+                }else{
+                    monedaConvertida=-1;
                 }
             } else if (origen.equals(TipoMoneda.GBP)) {
                 if (destino.equals(TipoMoneda.EUR)) {
-                    monedaConvertida = (float) (money * gbpEur);
+                    monedaConvertida =  (money * gbpEur);
                     //TODO hacer cambio GBP DOLAR
                 }else if(destino.equals(TipoMoneda.USD)){
-                monedaIntercambio=(float)(money*gbpEur);
-                monedaConvertida=(float)(monedaIntercambio*eurUsd);
-            }
+                monedaIntercambio=(money*gbpEur);
+                monedaConvertida=(monedaIntercambio*eurUsd);
+                }else{
+                    monedaConvertida=-1;
+                }
             } else if (origen.equals(TipoMoneda.USD)) {
                 if (destino.equals(TipoMoneda.EUR)) {
-                    monedaConvertida = (float) (money * usdEur);
+                    monedaConvertida =  (money * usdEur);
                 }else if(destino.equals(TipoMoneda.GBP)){
-                    monedaIntercambio=(float)(money*usdEur);
-                    monedaConvertida=(float)(monedaIntercambio*eurGbp);
+                    monedaIntercambio=(money*usdEur);
+                    monedaConvertida=(monedaIntercambio*eurGbp);
+                }else{
+                    monedaConvertida=-1;
                 }
-                //TODO hacer cambio USD a GBP
-
             } else {
                 monedaConvertida = -1;
             }

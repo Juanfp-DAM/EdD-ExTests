@@ -69,5 +69,54 @@ class MoneyTest {
         assertEquals(138.49f,resultado);
     }
 
+    @Test
+    void tipoCambio6(){
+        //ARRANGE
+        TipoMoneda origen=TipoMoneda.USD;
+        TipoMoneda destino=TipoMoneda.GBP;
+        float money=1000.0f;
+        //ACT
+        float resultado=Money.change(origen, destino,money);
+        //ASSERT
+        assertEquals(722.14f,resultado);
+    }
+
+
+    @Test
+    void tipoCambio7(){
+        //ARRANGE
+        TipoMoneda origen=TipoMoneda.PTS;
+        TipoMoneda destino=TipoMoneda.EUR;
+        float money=100.0f;
+        //ACT
+        float resultado=Money.change(origen, destino,money);
+        //ASSERT
+        assertEquals(-1f,resultado);
+    }
+
+
+    @Test
+    void tipoCambio8(){
+        //ARRANGE
+        TipoMoneda origen=TipoMoneda.EUR;
+        TipoMoneda destino=TipoMoneda.PTS;
+        float money=123.3f;
+        //ACT
+        float resultado=Money.change(origen, destino,money);
+        //ASSERT
+        assertEquals(-1f,resultado);
+    }
+
+    @Test
+    void tipoCambio9(){
+        //ARRANGE
+        TipoMoneda origen=TipoMoneda.USD;
+        TipoMoneda destino=TipoMoneda.EUR;
+        float money=-167.34f;
+        //ACT
+        float resultado=Money.change(origen, destino,money);
+        //ASSERT
+        assertEquals(-1f,resultado);
+    }
 
 }
